@@ -11,8 +11,9 @@ use Filament\Forms\Components\TextInput;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
+use Filament\Tables\Actions\Action;
+use Filament\Tables\Actions\DeleteAction;
 use Filament\Tables\Actions\EditAction;
-use Filament\Tables\Columns\BooleanColumn;
 use Filament\Tables\Columns\TextColumn;
 
 class TaskResource extends Resource
@@ -29,6 +30,7 @@ class TaskResource extends Resource
             ->schema([
                 TextInput::make('name')
                         ->label('Nome da Tarefa')
+                        ->unique(ignorable: fn($record) => $record)
                         ->required(),
                 TextInput::make('cost')
                         ->label('R$ Custo')
@@ -56,9 +58,25 @@ class TaskResource extends Resource
                     ->date('d F Y')
                     ->label('Data Limite'),
             ])->actions([
+                Action::make('up')
+                    ->iconButton()
+                    ->icon('heroicon-o-arrow-up')
+                    ->action(fn (Task $record) => $record->moveOrderUp($record))
+                    ->disabled(fn (Task $record) => $record->order_of_presentation == 1)
+                    ->tooltip('Subir'),
+                Action::make('down')
+                    ->iconButton()
+                    ->icon('heroicon-o-arrow-down')
+                    ->action(fn (Task $record) => $record->moveOrderDown())
+                    ->disabled(fn (Task $record) => $record->order_of_presentation >= Task::count())
+                    ->tooltip('Descer'),
                 EditAction::make()
                     ->iconButton()
-                    ->tooltip('Editar'),
+                    ->tooltip('Editar')
+                    ->color('success'),
+                DeleteAction::make()
+                    ->iconButton()
+                    ->tooltip('Apagar'),
             ]);
     }
 
@@ -72,9 +90,10 @@ class TaskResource extends Resource
     public static function getPages(): array
     {
         return [
-        'index' => ListTasks::route('/'),
+            'index' => ListTasks::route('/'),
             'create' => CreateTask::route('/create'),
             'edit' => EditTask::route('/{record}/edit'),
         ];
     }
+
 }

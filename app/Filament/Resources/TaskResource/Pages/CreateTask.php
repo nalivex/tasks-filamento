@@ -13,7 +13,7 @@ class CreateTask extends CreateRecord
 
     protected function mutateFormDataBeforeCreate(array $data): array
     {
-        $data['order_of_presentation'] = Task::count()+1;
+        $data['order_id'] = Task::count()+1;
 
         return $data;
     }
