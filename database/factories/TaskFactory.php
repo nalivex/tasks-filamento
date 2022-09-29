@@ -13,7 +13,7 @@ class TaskFactory extends Factory
             'name' => fake()->unique()->name(),
             'cost' => fake()->randomFloat(2, 0, 100),
             'date_limit' =>  now(),
-            'order_of_presentation' => Task::count()+1,
+            'order_of_presentation' => Task::query()->max('order_of_presentation') + 1,
         ];
     }
 }

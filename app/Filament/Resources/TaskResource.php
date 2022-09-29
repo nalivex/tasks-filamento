@@ -67,8 +67,8 @@ class TaskResource extends Resource
                 Action::make('down')
                     ->iconButton()
                     ->icon('heroicon-o-arrow-down')
-                    ->action(fn (Task $record) => $record->moveOrderDown())
-                    ->disabled(fn (Task $record) => $record->order_of_presentation >= Task::count())
+                    ->action(fn (Task $record) => $record->moveOrderDown($record))
+                    ->disabled(fn (Task $record) => $record->order_of_presentation >= Task::query()->max('order_of_presentation'))
                     ->tooltip('Descer'),
                 EditAction::make()
                     ->iconButton()

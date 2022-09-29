@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Task extends Model
 {
@@ -19,42 +20,39 @@ class Task extends Model
 
     public function moveOrderUp($record)
     {
+        $value= Task::query()->max('order_of_presentation') + 1;
+
         $task = Task::query()
-            ->where('order_of_presentation', $record->order_of_presentation--)
+            ->where('order_of_presentation', $record->order_of_presentation - 1)
             ->first();
 
-        $value = Task::query()->whereIn('order_of_presentation', [$record->order_of_presentation, $task->order_of_presentation])->get();
+        $id = $record->order_of_presentation;
 
-        $value = [
-             [
-                 'id' => $record->id,
-                 'order_of_presentation' => ['-', 1] // Add
-             ] ,
-             [
-                 'id' => $task->id,
-                 'order_of_presentation' => ['+', 1] // Subtract
-             ] ,
-        ];
-        $index = 'id';
+        $task->update(['order_of_presentation' => $value]);
 
-        Task::update([$value, $index]);
-    //    Task::upsert(
-    //             [
-    //                 [
-    //                     'order_of_presentation' => $value[1]['order_of_presentation'],
-    //                     'name' => $value[0]['name'],
-    //                     'cost' => $value[0]['cost'],
-    //                     'date_limit' => $value[0]['date_limit'],
-    //                 ],
-    //                 [
-    //                     'order_of_presentation' => $value[0]['order_of_presentation'],
-    //                     'name' => $value[1]['name'],
-    //                     'cost' => $value[1]['cost'],
-    //                     'date_limit' => $value[1]['date_limit'],
+        $record->update(['order_of_presentation' => $record->order_of_presentation - 1]);
 
-    //                 ],
-    //             ],
-    //             ['order_of_presentation'],
-    //         );
+        $task->update(['order_of_presentation' => $id]);
+
     }
+
+    public function moveOrderDown($record)
+    {
+
+        $value= Task::query()->max('order_of_presentation') + 1;
+
+        $task = Task::query()
+            ->where('order_of_presentation', $record->order_of_presentation + 1)
+            ->first();
+
+        $id = $record->order_of_presentation;
+
+        $task->update(['order_of_presentation' => $value]);
+
+        $record->update(['order_of_presentation' => $record->order_of_presentation + 1]);
+
+        $task->update(['order_of_presentation' => $id]);
+
+    }
+
 }
