@@ -314,9 +314,9 @@ return [
     */
 
     'middleware' => [
-        // 'auth' => [
-        //     Authenticate::class,
-        // ],
+        'auth' => [
+            Authenticate::class,
+        ],
         'base' => [
             EncryptCookies::class,
             AddQueuedCookiesToResponse::class,
