@@ -14,6 +14,7 @@ use Filament\Resources\Table;
 use Filament\Tables\Actions\Action;
 use Filament\Tables\Actions\DeleteAction;
 use Filament\Tables\Actions\EditAction;
+use Filament\Tables\Columns\BadgeColumn;
 use Filament\Tables\Columns\TextColumn;
 
 class TaskResource extends Resource
@@ -34,6 +35,7 @@ class TaskResource extends Resource
                         ->required(),
                 TextInput::make('cost')
                         ->label('R$ Custo')
+                        ->numeric()
                         ->required(),
                 DatePicker::make('date_limit')
                         ->label('Data Limite')
@@ -50,19 +52,22 @@ class TaskResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('name')
-                    ->label(('Tarefa')),
-                TextColumn::make('cost')
-                    ->label('R$ Custo'),
-                TextColumn::make('date_limit')
+                BadgeColumn::make('name')
+                    ->label(('Tarefa'))
+                    ->color(fn (Task $record) => $record->cost >= 1000 ? 'success' : 'white'),
+                BadgeColumn::make('cost')
+                    ->label('R$ Custo')
+                    ->color(fn (Task $record) => $record->cost >= 1000 ? 'success' : 'white'),
+                BadgeColumn::make('date_limit')
                     ->date('d F Y')
-                    ->label('Data Limite'),
+                    ->label('Data Limite')
+                    ->color(fn (Task $record) => $record->cost >= 1000 ? 'success' : 'white'),
             ])->actions([
                 Action::make('up')
                     ->iconButton()
                     ->icon('heroicon-o-arrow-up')
                     ->action(fn (Task $record) => $record->moveOrderUp($record))
-                    ->disabled(fn (Task $record) => $record->order_of_presentation == 1)
+                    ->disabled(fn (Task $record) => $record->order_of_presentation <= Task::query()->min('order_of_presentation'))
                     ->tooltip('Subir'),
                 Action::make('down')
                     ->iconButton()
