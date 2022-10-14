@@ -82,9 +82,9 @@ $ php artisan migrate
 <table> 
 <tr>
  
-<td align="center"><a href="https://github.com/nalivex"><img style="border-radius: 50%" src="https://ca.slack-edge.com/TLAVDH7C2-U020JT4QD08-728187f5c368-512" width="100px" alt=""/>
+<td align="center"><a href="https://github.com/nalivex"><img style="border-radius: 50%" src="https://user-images.githubusercontent.com/69721549/195907119-b6c4d992-2281-48f4-9b03-4b5a6569f371.jpeg" width="100px" alt=""/>
  <br />
- <sub><b>Ana L</b></sub></a> <a href="https://github.com/nalivex">🚀</a></td>
+ <sub><b>Ana Livia</b></sub></a> <a href="https://github.com/nalivex">🚀</a></td>
  
 </tr>
   
