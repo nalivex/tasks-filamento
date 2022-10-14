@@ -35,7 +35,22 @@ As seguintes ferramentas foram usadas na construção do projeto:
 <h2 id="link">:link: Link Surge - link para visualização do site</h2>
 <a href="http://tasks-fatto.herokuapp.com/admin">tasks</a>
 
+<h2 id="imagens">:computer: Imagens Desktop</h2>
 
+- **Página de Login**
+<img alt="login" src="https://user-images.githubusercontent.com/83218983/128033772-fe8e6b66-adfa-412b-b269-a6a969f2224f.png" width="314"/>
+
+- **Página inicial**
+<img alt="login" src="https://user-images.githubusercontent.com/83218983/128033772-fe8e6b66-adfa-412b-b269-a6a969f2224f.png" width="314"/>
+
+- **Página de cadastro de tarefa**
+<img alt="restaurantes" src="https://user-images.githubusercontent.com/83218983/128034569-cadd725d-7685-4af7-8e73-5ede5b3ed24a.png" width="314"/>
+
+- **Página Bde edição de tarefa**
+<img alt="restaurantes" src="https://user-images.githubusercontent.com/83218983/128034700-f3f51dd2-3578-4ea5-abe4-54f4e3e66512.png" width="314"/>
+
+- **Página Cardápio de apagar tarefa**
+<img alt="cardapio" src="https://user-images.githubusercontent.com/83218983/128035186-ce9a491c-4a6a-415b-9a2e-57fae6909fb8.png" width="314"/>
 
 <h2 id="requisitos">:leftwards_arrow_with_hook: Pré-requisitos</h2>
 
