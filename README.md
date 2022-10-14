@@ -1,66 +1,79 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# tasks-fillament
+Link do Surge: <a href="http://tasks-fatto.herokuapp.com/admin">Tasks Filament</a>
+<h1 align="center" id="top">:rocket: == Tasks == :rocket:</h1>
 
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <a href="#sobre">Sobre</a> &#xa0; | &#xa0; 
+  <a href="#funciona">O que funciona</a> &#xa0; | &#xa0;
+  <a href="#requisitos">Pré requisitos</a> &#xa0; | &#xa0;
+  <a href="#desenvolvedores">Desenvolvedores</a>
 </p>
 
-## About Laravel
+<h2 id="sobre">:notebook: Sobre </h2>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<p align="center">:rocket: Projeto desenvolvido para cadastro de tarefas com datas limites para execução e reordenação das tarefas </p>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<h2 id="tecnologias"> 🛠 Tecnologias </h2>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+As seguintes ferramentas foram usadas na construção do projeto:
 
-## Learning Laravel
+* Php
+* Laravel 
+* Filament(biblioteca)
+* Mysql
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<h2 id="funciona">:heavy_check_mark: O que funciona</h2>
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+* Login e Cadastros com validação de campos;
+* Cadastro de Tarefas com data limite com validação de campos;
+* Deletar tarefas;
+* Edição de tarefas com validação de campos;
+* Reordenar tarefas com botões;
+* Diferença de cor das tarefas quando o valor da mesma for mais que 1.000;
+ 
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+<h2 id="link">:link: Link Surge - link para visualização do site</h2>
+<a href="http://tasks-fatto.herokuapp.com/admin">tasks</a>
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
+<h2 id="requisitos">:leftwards_arrow_with_hook: Pré-requisitos</h2>
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Laravel](https://laravel.com), [Filament](https://filamentphp.com/). 
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
-## Contributing
+<h4>:checkered_flag: Rodando o projeto </h4>
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```bash
+# Clone este repositório
+$ git clone <https://github.com/nalivex/tasks-filamento.git>
+# Acesse a pasta do projeto no terminal
+$ cd ./tasks-filamento
+# Instale as dependências
+$ composer install
+$ yarn
+# Para iniciar o projeto
+$ php artisan serve
+# O servidor inciará na porta:8000 - acesse <http://localhost:8000>
+# Para iniciar o banco de dados
+$ docker start
+$ php artisan migrate
+```
 
-## Code of Conduct
+<h2 id="desenvolvedores">:construction_worker: Desenvolvedores</h2>
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+<table> 
+<tr>
+ 
+<td align="center"><a href="https://github.com/nalivex"><img style="border-radius: 50%" src="https://ca.slack-edge.com/TLAVDH7C2-U020JT4QD08-728187f5c368-512" width="100px" alt=""/>
+ <br />
+ <sub><b>Ana L</b></sub></a> <a href="https://github.com/nalivex">🚀</a></td>
+ 
+</tr>
+  
+</table>
 
-## Security Vulnerabilities
+👋🏽 Entre em contato!
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<a href="#top">Voltar para o topo</a>
