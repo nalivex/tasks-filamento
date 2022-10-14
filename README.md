@@ -38,7 +38,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 <h2 id="imagens">:computer: Imagens Desktop</h2>
 
 - **Página de Login**
-<img alt="login" src="https://user-images.githubusercontent.com/83218983/128033772-fe8e6b66-adfa-412b-b269-a6a969f2224f.png" width="314"/>
+<img alt="login" src="https://github.com/nalivex/tasks-filamento/issues/2#issue-1409660594" width="314"/>
 
 - **Página inicial**
 <img alt="login" src="https://user-images.githubusercontent.com/83218983/128033772-fe8e6b66-adfa-412b-b269-a6a969f2224f.png" width="314"/>
