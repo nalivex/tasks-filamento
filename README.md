@@ -37,20 +37,21 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 <h2 id="imagens">:computer: Imagens Desktop</h2>
 
-- **Página de Login**
-<img alt="login" src="https://github.com/nalivex/tasks-filamento/issues/2#issue-1409660594" width="314"/>
+- **Página de login**
+<img alt="login" src="https://user-images.githubusercontent.com/69721549/195908330-b5e03cd8-3f15-49c2-969c-6b65d71062c2.png" width="314"/>
 
-- **Página inicial**
-<img alt="login" src="https://github.com/nalivex/tasks-filamento/issues/3#issue-1409662584" width="314"/>
+- **Página Inicial**
+<img alt="inicial" src="https://user-images.githubusercontent.com/69721549/195908734-5ad35934-ef10-430e-a8b8-d4b27217c392.png" width="314"/>
+
 
 - **Página de cadastro de tarefa**
-<img alt="restaurantes" src="https://user-images.githubusercontent.com/83218983/128034569-cadd725d-7685-4af7-8e73-5ede5b3ed24a.png" width="314"/>
+<img alt="create" src="https://user-images.githubusercontent.com/69721549/195909091-f087c499-e4ca-488b-b331-f6b3143b4e20.png" width="314"/>
 
-- **Página Bde edição de tarefa**
-<img alt="restaurantes" src="https://user-images.githubusercontent.com/83218983/128034700-f3f51dd2-3578-4ea5-abe4-54f4e3e66512.png" width="314"/>
+- **Página de edição de tarefa**
+<img alt="edit" src="https://user-images.githubusercontent.com/69721549/195908782-0d66bfc1-b27b-4e9b-bbba-9d80b73bbcf9.png" width="314"/>
 
-- **Página Cardápio de apagar tarefa**
-<img alt="cardapio" src="https://user-images.githubusercontent.com/83218983/128035186-ce9a491c-4a6a-415b-9a2e-57fae6909fb8.png" width="314"/>
+- **Página de apagar tarefa**
+<img alt="delete" src="https://user-images.githubusercontent.com/69721549/195909005-574ddcba-125b-4d9e-83c7-320b1f148220.png" width="314"/>
 
 <h2 id="requisitos">:leftwards_arrow_with_hook: Pré-requisitos</h2>
 
